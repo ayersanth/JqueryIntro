@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="css/style.css">
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+</head>
+
+<body>
+
+	<h1 class='my-title'>Hello World</h1>
+
+	<button class="button">Click Me!</button>
+	
+
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+
+  <!-- his is saying that once the doc is ready go do line 26 -->
+<script>
+	
+	$(document).ready(function(){
+		$('.my-title').fadeOut(2000);
+	})
+
+	$('.button').click(function(){
+		$('.my-title').fadeIn(2000);
+	})
+
+</script>
+</body>
+
+</html>

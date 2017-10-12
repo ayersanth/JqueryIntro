@@ -1,0 +1,15 @@
+* {
+	text-align: center;
+}
+
+.button {
+	background-color: #cccccc;
+	border-color: #bbbbbb;
+	border-radius: 15px;
+	margin-top: 60px;
+}
+
+.my-title {
+	position: absolute;
+	margin-left: 36%;
+}
