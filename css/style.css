@@ -1,15 +1,57 @@
 * {
 	text-align: center;
+	margin: 0;
+	padding: 0;
 }
 
 .button {
-	background-color: #cccccc;
+	color: white;
+	background-color: #333333;
 	border-color: #bbbbbb;
+	margin-top: 10px;
+	padding: 3px 10px;
+	border-style: none;
 	border-radius: 15px;
-	margin-top: 60px;
 }
 
-.my-title {
-	position: absolute;
-	margin-left: 36%;
+li {
+	text-decoration: none;
+	list-style: none;
+}
+
+ul {
+	text-align: center;
+}
+
+.space {
+	height: 1000px;
+}
+
+.container {
+	padding: 100px;
+}
+
+.col-xs-6 {
+	height: 300px;
+	font-size: 3em;
+}
+
+.text {
+	padding-top: 23%;
+}
+
+.box1 {
+	background-color: blue;
+}
+
+.box2 {
+	background-color: orange;
+}
+
+.box3 {
+	background-color: teal;
+}
+
+.box4 {
+	background-color: cyan;
 }

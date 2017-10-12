@@ -12,26 +12,65 @@
 
 <body>
 
+	<button class="button">Click Me!</button>
+
 	<h1 class='my-title'>Hello World</h1>
 
-	<button class="button">Click Me!</button>
-	
+	<ul>	
+		<li>look out!</li>
+		<li>look out!</li>
+		<li>look out!</li>
+		<li>look out!</li>
+		<li>look out!</li>
+	</ul>
+
+	<section class="space"></section>
 
 <script
   src="https://code.jquery.com/jquery-2.2.4.min.js"
   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-  crossorigin="anonymous"></script>
+  crossorigin="anonymous">
+</script>
 
   <!-- his is saying that once the doc is ready go do line 26 -->
 <script>
+
+	// Here we have assigned two html items with jQuery The 2 items are in the DOM above.
+	// We then use vanilla javascript to assign the items via jQuery to a normal javascript variable - 'grabStuff'
+	var grabStuff = $('.my-title, ul');
 	
 	$(document).ready(function(){
-		$('.my-title').fadeOut(2000);
+
+		$(grabStuff).fadeOut(2000);
+
 	})
 
+	// After being fadeOut you click the Click me! button which makes everything fadeIn and then once thats finished, we move into a chain of actions to complete. Note: The more you click the more of the following functions you will que up. 
 	$('.button').click(function(){
-		$('.my-title').fadeIn(2000);
+
+		console.log('a');
+		// Because grabStuff is made up of two variables it will apply the function() inside fadeIn TWICE, once for my-title and once for ul.
+		$(grabStuff).fadeIn(2000, function(){
+
+			console.log('b');
+			$('li').click(function(){
+			//  jQuery chaining
+			$(this).hide(1000).show(1000).fadeOut(5000).fadeIn(5000);
+			});
+
+		});
+
 	})
+
+	$(window).scroll(function(){
+		$('h1').fadeOut(2000);
+	})
+
+
+	
+
+	
+
 
 </script>
 </body>
